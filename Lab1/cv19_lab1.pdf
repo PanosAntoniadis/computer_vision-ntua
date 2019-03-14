@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<title>mycourses.ntua.gr</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="author" content="Aggeliki Dimitriou and Manos Tsiavos " />
+
+<link rel="stylesheet" type="text/css" href="https://mycourses.ntua.gr/css/emp.css" media="screen, projection, tv" />
+<link rel="stylesheet" type="text/css" href="https://mycourses.ntua.gr/css/print.css" media="print" />
+
+
+<link rel="top" href="http://mycourses.ntua.gr/index.php" title="" />
+<link rel="courses" href="https://mycourses.ntua.gr/auth/courses.php" title="Λίστα Μαθημάτων" />
+<link rel="profil" href="https://mycourses.ntua.gr/auth/profile.php" title="Αλλαγή του προφίλ μου" />
+<link href="http://www.claroline.net/documentation.htm" rel="Help" />
+<link href="http://www.claroline.net/credits.htm" rel="Author" />
+<link href="http://www.claroline.net" rel="Copyright" />
+
+
+
+
+</head>
+
+<body dir="ltr" ><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69937458-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<style>
+
+.iframev {
+DISPLAY: inline;
+}
+
+.iframen {
+DISPLAY: none;
+
+}
+
+</style>
+
+<script type="text/javascript">document.cookie="javascriptEnabled=true";</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+sfHover = function() 
+{
+	var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+	var sfRme = document.getElementById("pfix");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+sfRme.className="iframev";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+			sfRme.className="iframen";
+
+		}
+	}
+
+
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+//--><!]]></script>
+		<table width="100%" height="85" border="0" cellpadding="0" cellspacing="0">
+		<tr><td>
+		
+		<table width="100%" height="85" border="0" cellpadding="0" cellspacing="0">
+		  <tr>
+
+		    <td width="84"><img src="https://mycourses.ntua.gr/img/img/../../css/emp/header_noc.jpg" width="84" height="85"></td>
+		    <td align="center" background="https://mycourses.ntua.gr/img/img/../../css/emp/header_bg.jpg"><img src="https://mycourses.ntua.gr/img/img/../../css/emp/title_new.jpg" width="268" height="85"></td>
+		    <td width="82"><img src="https://mycourses.ntua.gr/img/img/../../css/emp/header_pyrforos.jpg" width="82" height="85"></td>
+		  </tr>
+</table>
+</td></tr>
+<tr><td>
+	<!-- deuteros pinakas (ergaleia)-->
+
+<table width="100%" height="39" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="pathfont" width="264" background="https://mycourses.ntua.gr/img/img/../../css/emp/path_left.jpg">
+		
+    	<!--img src="http://mycourses.ntua.gr/claroline/css/emp/path_left.jpg" width="264" height="39"--></td>
+    <td valign="top" background="https://mycourses.ntua.gr/img/img/../../css/emp/path_bg.jpg">
+    	<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      		<tr>
+        		<td valign="top">
+<ul id="nav">
+
+</ul>
+</td>
+
+<td height="25">
+	&nbsp
+</td>
+		
+
+		<td width="180" align="right" class="pathfont" nowrap>
+						</a>
+		</td>
+		<td width="80" align="right" class="pathfont" nowrap>
+						</a>
+		</td>
+        <td width="60" align="right" class="pathfont" nowrap>
+        	&nbsp;        </td>
+        <td width="20" nowrap>
+        	<img src="https://mycourses.ntua.gr/img/img/../../css/emp/spacer.gif" width="20" height="1">
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+<!-- deuteros pinakas -->
+</td></tr>
+<tr><td>
+<!--table id="mainTableOuter" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td valign="top"-->
+<!-- tritos pinakas (kyrios)-->
+<table width="100%" height="139" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="244" rowspan="2" valign="top" class="menubg">
+<!-- Lista ma8hmatwn-->
+<table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+		        <td width="80%"><img src="https://mycourses.ntua.gr/img/img/../../css/emp/spacer.gif" width="244" height="1"></td>
+		      </tr>
+		<!--table id="mainTableInner" width="100%" cellspacing="1" cellpadding="0" border="0" valign="top">
+			<tr> 
+				<td id="mainTableTDleft" width="80%" valign="top"-->
+					
+
+	<tr>
+		<td>
+			<ul class="menu">
+		<li>
+			<span class="menutitle">
+                  	Ανοικτά Μαθήματα
+        	</span>
+        </li>
+          <li><a href="/auth/login.php?depcode=CIVIL" class="school">&bull;  Πολιτικών Μηχανικών
+</a></li><li><a href="/auth/login.php?depcode=MECH" class="school">&bull;  Μηχανολόγων Μηχανικών
+</a></li><li><a href="/auth/login.php?depcode=ECE" class="school">&bull;  Ηλεκτρολόγων Μηχανικών & Μηχανικών Υπολογιστών
+</a></li><li><a href="/auth/login.php?depcode=ARCH" class="school">&bull;  Αρχιτεκτόνων Μηχανικών
+</a></li><li><a href="/auth/login.php?depcode=CHEM" class="school">&bull;  Χημικών Μηχανικών
+</a></li><li><a href="/auth/login.php?depcode=SURVEY" class="school">&bull;  Αγρονόμων & Τοπογράφων Μηχανικών
+</a></li><li><a href="/auth/login.php?depcode=METAL" class="school">&bull;  Μηχανικών Μεταλλείων Μεταλλουργών
+</a></li><li><a href="/auth/login.php?depcode=NAVAL" class="school">&bull;  Ναυπηγών Μηχανολόγων Μηχανικών
+</a></li><li><a href="/auth/login.php?depcode=SEMFE" class="school">&bull;  Εφαρμοσμένων Μαθηματικών & Φυσικών Επιστημών
+</a></li><li><a href="/auth/login.php?depcode=PSTGR" class="school">&bull; Μεταπτυχιακών Προγραμμάτων
+</a></li></ul>
+</tr>
+</td>
+				
+				<tr>
+			  		<td><img src="https://mycourses.ntua.gr/img/img/../../css/emp/spacer.gif" width="15" height="39"></td>
+			  </tr>
+		    </table>
+		    </td>
+				<!--td id="mainTableTDmiddle" width="1%">
+				</td-->
+<td width="20" rowspan="2" background="https://mycourses.ntua.gr/img/img/../../css/emp/menu_shadow.jpg">
+	<img src="https://mycourses.ntua.gr/img/img/../../css/emp/menu_shadow.jpg" width="20" height="1">
+</td>
+<!-- TD selidas-->					
+<td valign="top" width="99%">
+<!-- Periexomeno selidas-->					
+
+<div id="breadcrumbLine">
+
+</div>
+
+
+
+<!-- - - - - - - - - - -  End of Claroline Banner  - - - - - - - - - - -->
+
+
+
+<!-- - - - - - - - - - - Claroline Body - - - - - - - - - -->
+<div id="claroBody">
+
+<table align="left" width="100%">
+<tr>
+<td>
+<form action="/auth/login.php" method="post">
+<fieldset style="padding: 7px;">
+<input type="hidden" name="sourceUrl" value="/projects/goto/index.php/cv19_lab1.pdf">
+<input type="hidden" name="cidRequired" value="true">
+
+<legend>Σύνδεση</legend>
+<small>
+<label for="username">Όνομα χρήστη </label><br />
+<b><input type="text" name="login" id="username"></b><br />
+<label for="password">Κωδικός πρόσβασης </label><br />
+<input type="password" name="password" id="password"><br />
+<br /><input type="submit" class="buttonSubmit" value="Είσοδος"> 
+</small>
+
+			<p>
+					<span class="formexpl">Συνδεθείτε για να δημιουργήσετε νέο μάθημα αν είστε μέλος ΔΕΠ ή για να εγγραφείτε σε κάποιο κλειστό μάθημα αν είστε φοιτητής.</span>
+			</p></fieldset>
+</form>
+<p><!--br><br>Επισκευθείτε τη σελίδα <a href="http://www.ntua.gr/mycourses/">http://www.ntua.gr/mycourses/</a> για πληροφορίες σε σχέση με την υπηρεσία.--></p></td>
+</tr>
+</table>
+
+</div>
+<!-- - - - - - - - - - -   End of Claroline Body   - - - - - - - - - - -->
+
+
+				</td>
+				<td width="20">
+					<img width="20" height="15" src="https://mycourses.ntua.gr/img/img/../../css/emp/spacer.gif" />
+				</td>
+			</tr>
+		<tr>
+    				<td valign="bottom" colspan="2">
+    					<table width="100%" height="34"  border="0" cellpadding="0" cellspacing="0" bgcolor="#E3E3E3">
+      						<tr>
+        						<td align="center" class="footer">
+        							Ο παρών δικτυακός τόπος δημιουργήθηκε και συντηρείται από το <a href="http://www.noc.ntua.gr" target="_blank">Κέντρο Δικτύων</a> του ΕΜΠ 
+        							<br>
+        							Για απορίες, σχόλια και ιδέες μπορείτε να απευθύνεστε στη διεύθυνση noc@ntua.gr ή στο τηλέφωνο 210-7721861, Δευτέρα έως Παρασκευή, 09:00 π.μ. - 5:00 μ.μ.        							<br>
+        							Αναπτύχθηκε με το ελεύθερο λογισμικό <a href="http://www.claroline.net" target="_blank">Claroline</a> &copy; 2001 - 2018        							
+        						</td>
+        						<td width="34" align="right"><a href="http://www.noc.ntua.gr" target="_blank"><!--img src="http://mycourses.ntua.gr/css/emp/ked.jpg" alt="Κέντρο Δικτύων ΕΜΠ" title="Κέντρο Δικτύων ΕΜΠ" width="34" height="34" border="0"--></a></td>
+        						<td width="20" align="right"><img src="https://mycourses.ntua.gr/img/img/../../css/emp/spacer.gif" width="20" height="34"></td>
+      						</tr>
+  			</table>
+      				</td>
+      				<!--td width="20">
+						<img width="20" height="15" src="http://mycourses.ntua.gr//claroline/css/emp/spacer.gif" />
+					</td-->
+  			</tr>
+  			</table> <!--mainTableInner-->
+  			<br>
+  			<table width="100%">
+  				<tr>
+  								<td width="244">&nbsp;</td>
+  								<td>
+  								</td width="100">
+  								<td align="right" width="10%">
+  									<img border='0' src='https://mycourses.ntua.gr/img/img/white_new/ec-flags.jpg ' />
+  									<br>
+  									<a href='http://www.noc.ntua.gr/index.php?module=ContentExpress&func=display&btitle=CE&mid=&ceid=107' target='_blank' class='small'>
+										<small>Συγχρηματοδότηση										<br />
+										από την Ε.Ε.</small>
+									</a>
+								</td>
+  							</tr>
+  			</table>
+	</td>
+</tr>
+</table><!--mainTableOuter-->
+
+
+
+
+		<script language="javascript">
+			alert("Απαιτείται πιστοποίηση για πρόσβαση σε αυτήν τη σελίδα")
+		</script>
+		</body>
+</html>

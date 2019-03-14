@@ -1,2 +1,4 @@
-# ntua-computer_vision
-Lab exercises of computer vision course in NTUA
+# Lab exercises of computer vision course in NTUA
+
+## Table of contents:
+- __Lab 1:__ 

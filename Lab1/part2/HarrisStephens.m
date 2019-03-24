@@ -52,8 +52,7 @@ Cond2 = (R > theta * max(max(R)));
 
 % Return the coordinates of the detected points along
 % with the scale.
-points = strcat([j, i], sigma);
-
+points = horzcat([j, i], sigma*ones(size(i)));
 end
 
 

@@ -23,7 +23,7 @@ N = 4;
 
 points_balloons = HarrisStephens(I_balloons, sigma, r, k, theta);
 % Visualize detected edges in 'balloons19.png'.
-interest_points_visualization(I_balloons, double(points_balloons));
+%interest_points_visualization(I_balloons, double(points_balloons));
 
 points_flowers = HarrisStephens(I_flowers, sigma, r, k, theta);
 % Visualize detected edges in 'sunflowers19.png'.
@@ -35,12 +35,17 @@ interest_points_visualization(I_flowers, double(points_flowers));
 
 
 
-
-
 % ------------------------------------ %
 %       2.3: Blobs Detection           %
 % ------------------------------------ %
 
+points_balloons = BlobsDetector(I_balloons, sigma, theta);
+% Visualize detected edges in 'balloons19.png'.
+interest_points_visualization(I_balloons, double(points_balloons));
+
+points_flowers = BlobsDetector(I_flowers, sigma, theta);
+% Visualize detected edges in 'sunflowers19.png'.
+interest_points_visualization(I_flowers, double(points_flowers));
 
 
 

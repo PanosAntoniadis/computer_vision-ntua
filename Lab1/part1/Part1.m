@@ -4,7 +4,7 @@ close all;
 clear all;
 %---------------------------   1.1 Create Input Images ---------------------%
 %1.1.1 read file
-I0 = imread('./cv19_lab1_parts1_2_material/edgetest_19.png');
+I0 = imread('../cv19_lab1_parts1_2_material/edgetest_19.png');
 I0=im2double(I0);
 imshow(I0);
 

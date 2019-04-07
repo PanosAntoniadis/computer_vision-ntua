@@ -1,8 +1,8 @@
-function [points] = BlobsDetector (input_I, sigma, theta)
+function [points] = BlobsDetector (I, sigma, theta)
 % BlobsDetector - Blobs Detector
 % 
 % Usage:
-%         points = BlobsDetector(input_I, sigma, theta)
+%         points = BlobsDetector(I, sigma, theta)
 % 
 % Description:
 % Returns a N*3 matrix that corresponds to the
@@ -11,17 +11,13 @@ function [points] = BlobsDetector (input_I, sigma, theta)
 % detection.
 % 
 % In:
-%   input_I: input image
+%   I: input image
 %   sigma: differential scale
 %   theta: a threshold
 %
 % Out:
 %   points: a N*3 matrix containing the detected points.
 %
-
-
-% Convert image from int to double precision
-I = im2double(input_I);
 
 % Define Gaussian smoothing kernel.
 n_sigma = ceil(3 * sigma) * 2 + 1;
@@ -37,9 +33,10 @@ Is = imfilter(I, Gs, 'symmetric');
 R = Lxx .* Lyy - Lxy.^2;
 
 % Keep appropriate pixels based on cornerness criterion.
+max_R = max(max(R));
 B_sq = strel('disk',n_sigma);
 Cond1 = (R == imdilate(R,B_sq));
-Cond2 = (R > theta * max(max(R)));
+Cond2 = (R > theta * max_R);
 [i, j] = find(Cond1 & Cond2);
 
 % Return the coordinates of the detected points along

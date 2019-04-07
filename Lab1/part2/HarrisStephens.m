@@ -1,8 +1,8 @@
-function [points] = HarrisStephens (input_I, sigma, r, k, theta)
+function [points] = HarrisStephens (I, sigma, r, k, theta)
 % HarrisStephens - Edge Detector
 % 
 % Usage:
-%         points = HarrisStephens(input_I, sigma, r, k , theta)
+%         points = HarrisStephens(I, sigma, r, k , theta)
 % 
 % Description:
 % Returns a N*3 matrix that corresponds to the
@@ -11,7 +11,7 @@ function [points] = HarrisStephens (input_I, sigma, r, k, theta)
 % detection.
 % 
 % In:
-%   input_I: input image
+%   I: input image
 %   sigma: differential scale
 %   r: integral scale
 %   k: corneness criterion parameter
@@ -21,12 +21,9 @@ function [points] = HarrisStephens (input_I, sigma, r, k, theta)
 %   points: a N*3 matrix containing the detected points.
 %
 
-% Convert image from int to double precision
-I = im2double(input_I);
-
 % Define Gaussian smoothing kernels.
 n_sigma = ceil(3 * sigma) * 2 + 1;
-n_r = ceil(3*r) * 2 + 1;
+n_r = ceil(3 * r) * 2 + 1;
 Gs = fspecial('gaussian', [n_sigma, n_sigma], sigma);
 Gp = fspecial('gaussian', [n_r, n_r], r);
 
@@ -42,17 +39,19 @@ l_plus = 1/2 * (J1 + J3 + sqrt((J1 - J3).^2 + 4*J2.^2));
 l_minus = 1/2 * (J1 + J3 - sqrt((J1 - J3).^2 + 4*J2.^2));
 
 % Compute cornerness criterion
-R = l_minus .* l_plus - k*(l_minus + l_plus).^2;
+R = l_minus .* l_plus - k * (l_minus + l_plus).^2;
 
 % Keep appropriate pixels based on cornerness criterion.
+max_R = max(max(R));
 B_sq = strel('disk',n_sigma);
 Cond1 = (R == imdilate(R,B_sq));
-Cond2 = (R > theta * max(max(R)));
+Cond2 = (R > theta * max_R);
 [i, j] = find(Cond1 & Cond2);
 
 % Return the coordinates of the detected points along
 % with the scale.
 points = horzcat([j, i], sigma*ones(size(i)));
+
 end
 
 

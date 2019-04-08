@@ -6,7 +6,7 @@ clear all;
 %1.1.1 read file
 I0 = imread('../cv19_lab1_parts1_2_material/edgetest_19.png');
 I0=im2double(I0);
-imshow(I0);
+%imshow(I0);
 
 %1.1.2 Add_Noise(I,PSNR) gaussian distribution
 J1=AddNoise(I0,10);
@@ -28,7 +28,7 @@ D= EdgeDetect(I,sigma,theta_edge,LaplacType);
 B=strel('diamond',1);
 M = imdilate(I0,B) - imerode(I0,B);
 T = M > theta_edge;
-imshow(T);
+%imshow(T); 
 
 %1.3.2 EdgeDetectionScore(noiseImage,clearImage)
 noiseImage=D;

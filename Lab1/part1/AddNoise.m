@@ -20,6 +20,6 @@ function J=AddNoise(I,PSNR)
 %
 Imax=max(max(I));
 Imin=min(min(I));
-sn=(Imax-Imin)/(10^(PSNR(1)/20));
+sn=(Imax-Imin)/(10^(PSNR/20));
 J=imnoise(I,'gaussian',0,sn^2);
 end

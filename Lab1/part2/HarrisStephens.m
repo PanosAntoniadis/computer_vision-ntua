@@ -37,7 +37,6 @@ J3 = imfilter((Fy .* Fy), Gp, 'symmetric');
 % Compute eigenvalues l+, l- of structure tensor J.
 l_plus = 1/2 * (J1 + J3 + sqrt((J1 - J3).^2 + 4*J2.^2));
 l_minus = 1/2 * (J1 + J3 - sqrt((J1 - J3).^2 + 4*J2.^2));
-
 % Compute cornerness criterion
 R = l_minus .* l_plus - k * (l_minus + l_plus).^2;
 

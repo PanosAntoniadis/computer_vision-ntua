@@ -11,6 +11,7 @@ I_flowers = imread('photos/sunflowers19.png');
 
 % Convert input images to double precision grayscale.
 I_balloons = im2double(rgb2gray(I_balloons));
+I_flowers = im2double(rgb2gray(I_flowers));
 
 % Set initial parameters.
 sigma = 2;
@@ -92,22 +93,40 @@ interest_points_visualization(I_flowers, double(points_flowers));
 saveas(f,'photos/balloons_2_4.png')
 
 
+
 % --------------------------------------------------------- %
 %   2.5: Speedup by using Box Filters and Integral Images   %
 % --------------------------------------------------------- %
 
-% Not ready yet! Only functions for Dxx, Dyy are ready.
-
-%{
+% ------------------------------ %
+%   Blobs Detector in one scale  %
+% ------------------------------ %
+f = figure;
 points_balloons = BoxFiltersDetector(I_balloons, sigma, theta);
 % Visualize detected edges in 'balloons19.png'.
 interest_points_visualization(I_balloons, double(points_balloons));
+saveas(f,'photos/balloons_2_5.png')
 
-points_flowers = BoxFiltersDetector(I_flowers, sigma, theta)
+f = figure;
+points_flowers = BoxFiltersDetector(I_flowers, sigma, theta);
 % Visualize detected edges in 'sunflowers19.png'.
 interest_points_visualization(I_flowers, double(points_flowers));
-%}
+saveas(f,'photos/flowers_2_5.png')
 
+% ------------------------------ %
+%   Multiscale Blobs Detector    %
+% ------------------------------ %
+f = figure;
+points_balloons = MultiscaleBoxFiltersDetector(I_balloons, sigma, s, N, theta);
+% Visualize detected edges in 'balloons19.png'.
+interest_points_visualization(I_balloons, double(points_balloons));
+saveas(f,'photos/balloons_2_5b.png')
+
+f = figure;
+points_flowers = MultiscaleBoxFiltersDetector(I_flowers, sigma, s, N, theta);
+% Visualize detected edges in 'sunflowers19.png'.
+interest_points_visualization(I_flowers, double(points_flowers));
+saveas(f,'photos/flowers_2_5b.png')
 
 
 

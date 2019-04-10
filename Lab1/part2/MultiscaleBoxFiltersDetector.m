@@ -42,19 +42,19 @@ points = [];
 for i=1:N
     interestPts = all_points{i};
     for p=1:size(interestPts,1)
-        point = logs(interestPts(p, 1), interestPts(p, 2), i);
+        point = logs(interestPts(p, 2), interestPts(p, 1), i);
         if (i < N && i > 1)
-            if (point >= logs(interestPts(p, 1), interestPts(p, 2), i+1) && point >= logs(interestPts(p, 1), interestPts(p, 2), i-1))
+            if (point >= logs(interestPts(p, 2), interestPts(p, 1), i+1) && point >= logs(interestPts(p, 2), interestPts(p, 1), i-1))
                 points = [points; interestPts(p, 1), interestPts(p, 2), interestPts(p, 3)];
                 continue;
             end
         end       
-        if ( i == N && point >= logs(interestPts(p, 1), interestPts(p, 2), i-1))
+        if ( i == N && point >= logs(interestPts(p, 2), interestPts(p, 1), i-1))
             points = [points; interestPts(p, 1), interestPts(p, 2), interestPts(p, 3)];
             continue;
         end
         
-        if ( i == 1 && point >= logs(interestPts(p, 1), interestPts(p, 2), i+1))
+        if ( i == 1 && point >= logs(interestPts(p, 2), interestPts(p, 1), i+1))
             points = [points; interestPts(p, 1), interestPts(p, 2), interestPts(p, 3)];
             continue;
         end

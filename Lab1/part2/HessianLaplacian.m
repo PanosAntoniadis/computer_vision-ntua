@@ -21,7 +21,7 @@ function [points] = HessianLaplacian (I, sigma, s, N, theta)
 %   points: a N*3 matrix containing the detected points.
 %
 
-% A cell containing the blobs detected in every scale.
+% A cell containing the points detected in every scale.
 all_points = cell(1,N);
 % Contains the LoG in each scale.
 logs = zeros(size(I, 1), size(I, 2), N);
@@ -42,22 +42,23 @@ points = [];
 for i=1:N
     interestPts = all_points{i};
     for p=1:size(interestPts,1)
-        point = logs(interestPts(p, 1), interestPts(p, 2), i);
+        point = logs(interestPts(p, 2), interestPts(p, 1), i);
         if (i < N && i > 1)
-            if (point >= logs(interestPts(p, 1), interestPts(p, 2), i+1) && point >= logs(interestPts(p, 1), interestPts(p, 2), i-1))
+            if (point >= logs(interestPts(p, 2), interestPts(p, 1), i+1) && point >= logs(interestPts(p, 2), interestPts(p, 1), i-1))
                 points = [points; interestPts(p, 1), interestPts(p, 2), interestPts(p, 3)];
                 continue;
             end
         end       
-        if ( i == N && point >= logs(interestPts(p, 1), interestPts(p, 2), i-1))
+        if ( i == N && point >= logs(interestPts(p, 2), interestPts(p, 1), i-1))
             points = [points; interestPts(p, 1), interestPts(p, 2), interestPts(p, 3)];
             continue;
         end
         
-        if ( i == 1 && point >= logs(interestPts(p, 1), interestPts(p, 2), i+1))
+        if ( i == 1 && point >= logs(interestPts(p, 2), interestPts(p, 1), i+1))
             points = [points; interestPts(p, 1), interestPts(p, 2), interestPts(p, 3)];
             continue;
         end
     end
 end
+
 

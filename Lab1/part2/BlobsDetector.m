@@ -37,10 +37,10 @@ max_R = max(max(R));
 B_sq = strel('disk',n_sigma);
 Cond1 = (R == imdilate(R,B_sq));
 Cond2 = (R > theta * max_R);
-[i, j] = find(Cond1 & Cond2);
+[j, i] = find(Cond1 & Cond2);
 
 % Return the coordinates of the detected points along
 % with the scale.
-points = horzcat([j, i], sigma*ones(size(i)));
+points = horzcat([i, j], sigma*ones(size(i)));
 
 end

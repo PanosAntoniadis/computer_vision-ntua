@@ -24,7 +24,7 @@ N = 4;
 % ---------------------------------------------------------- %
 %       2.1: Edge Detection using HarrisStephens method      %
 % ---------------------------------------------------------- %
-
+%{
 f = figure;
 points_balloons = HarrisStephens(I_balloons, sigma, r, k, theta);
 % Visualize detected edges in 'balloons19.png'.
@@ -112,7 +112,7 @@ points_flowers = BoxFiltersDetector(I_flowers, sigma, theta);
 % Visualize detected edges in 'sunflowers19.png'.
 interest_points_visualization(I_flowers, double(points_flowers));
 saveas(f,'photos/flowers_2_5.png')
-
+%}
 % ------------------------------ %
 %   Multiscale Blobs Detector    %
 % ------------------------------ %
@@ -127,7 +127,6 @@ points_flowers = MultiscaleBoxFiltersDetector(I_flowers, sigma, s, N, theta);
 % Visualize detected edges in 'sunflowers19.png'.
 interest_points_visualization(I_flowers, double(points_flowers));
 saveas(f,'photos/flowers_2_5b.png')
-
 
 
 

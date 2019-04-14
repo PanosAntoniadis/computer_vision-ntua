@@ -1,5 +1,5 @@
-%%%                             Part1:
-%%%            Theme: Edge Detection in grayscale Images
+%                             Part1:
+%            Theme: Edge Detection in grayscale Images
 close all;
 clear all;
 %---------------------------   1.1 Create Input Images ---------------------%
@@ -35,7 +35,7 @@ noiseImage=D;
 clearImage=T;
 C=EdgeDetectionScore(noiseImage,clearImage);
 
-%%-------C(sigma,theta_edge)  -------------------
+%-------C(sigma,theta_edge)  -------------------
 %{
 % Description : We examine for cases
 %  

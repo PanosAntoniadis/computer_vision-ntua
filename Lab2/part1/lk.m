@@ -1,6 +1,9 @@
 
 function [d_x,d_y] = lk(I1,I2,rho,epsilon,d_x0,d_y0)
 
+load("skinSamplesRGB.mat");
+[mean_CbCr, cov_CbCr] = trainPdf(skinSamplesRGB);
+
 boundingbox1 = findFace(I1,mean_CbCr, cov_CbCr);  % (x,y,width,height)
 bx1 = boundingbox1(1);
 by1 = boundingbox1(2);

@@ -2,7 +2,7 @@
 clear, clc, close all
 
 % Read input image
-I = imread('1.png');
+I = imread('./GreekSignLanguage/GSLframes/1.png');
 
 % -------------------------------- %
 %   1.1: Facial Skin Detection     %
@@ -64,7 +64,11 @@ d_x_r = imresize(d_x, 0.3);
 d_y_r = imresize(d_y, 0.3);
 %quiver(-d_x_r, -d_y_r);
 
+% Keep height and width of the first image
+width = w1;
+height = h1;
 
+<<<<<<< HEAD
 % ----------------------------------- %
 %   1.4: Compute global face shift    %
 % ----------------------------------- %

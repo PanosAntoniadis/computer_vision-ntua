@@ -53,7 +53,6 @@ for i=1:k
     c1 = imfilter(A1.*E, G_r, 'symmetric');
     c2 = imfilter(A2.*E, G_r, 'symmetric');
 
-    % Compute u
     det = b11 .* b22 - b12.^2;
     u_x = (b22.*c1 - b12.*c2)./det;
     u_y = (-b12.*c1 + b22.*c2)./det;
@@ -69,4 +68,3 @@ end
 
 
 end
-

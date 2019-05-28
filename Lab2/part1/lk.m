@@ -22,7 +22,7 @@ I1 = mat2gray(I1);
 I2 = mat2gray(I2);
 
 %Define the times d is re-computed
-k=50;
+k = 10;
 
 % Create the gaussian with standard deviation rho
 n = (ceil(3*rho)*2) + 1;

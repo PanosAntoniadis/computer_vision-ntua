@@ -7,3 +7,6 @@
 *.out
 *.gz
 *.tex
+*.png
+*.swp
+*.jpg

@@ -8,6 +8,7 @@ d_x0 = 0;
 d_y0 = 0;
 threshold = 0.01;
 multiscale=1;
+scales=4;
 
 % Load skin samples from skinSamplesRGB.mat
 load("skinSamplesRGB.mat");
@@ -42,7 +43,7 @@ for k = 1:70
         [d_x, d_y] = lk(I_prev_face, I_curr_face, rho, epsilon, d_x0, d_y0);
     else
         %Multiscale Lucas-Kanade
-        [d_x, d_y] = multi_lk(I_prev_face, I_curr_face, rho, epsilon, d_x0, d_y0,4);
+        [d_x, d_y] = multi_lk(I_prev_face, I_curr_face, rho, epsilon, d_x0, d_y0,scales);
     end
 
     [displ_x, displ_y] = displ(-d_x, -d_y, threshold);

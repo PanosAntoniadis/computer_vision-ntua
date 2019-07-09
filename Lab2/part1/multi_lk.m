@@ -17,10 +17,6 @@ function [d_x,d_y] = multi_lk(I1, I2,rho, epsilon, d_x0, d_y0,scales)
 
  	Out:
    		d_x, d_y: vector field d
-
-	Issues:
-    	1) Bug in dimensions when subsample-upsample
-    	2) Bilinear interpolation and corrections
 %}
 
 	I1_curr{1}=I1;

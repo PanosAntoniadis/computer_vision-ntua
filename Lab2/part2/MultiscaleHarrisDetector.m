@@ -6,7 +6,7 @@ function [points] = MultiscaleHarrisDetector (L, sigma, t, s, N, k, theta)
 %
 % Description:
 % Returns a N*4 matrix that corresponds to the
-% points detected.
+% points detected in input scales.
 % 
 % In:
 %   L: input video
@@ -33,12 +33,13 @@ for i = 1:N
     si = s.^(i-1) * sigma;
     ti = s.^(i-1) * t;
     % Get detected points in current scales.
-    [~, point_matrix(:,:,:,i)] = HarrisDetector(L, si, ti, k, theta);
-    % Compute Laplacian of Gaussian for space and time.
+    [~, point_matrix(:,:,:,i)] = HarrisDetector(L, sigma, t, k, theta, si, ti);
+    % Compute Laplacian of Gaussian in space.
     n_si =  ceil(3 * si) * 2 + 1; 
     log =  fspecial('log', n_si, si);
-    n_ti = ceil(3*ti) * 2 + 1;
-    log_time(1,1,1:n_ti) = fspecial('log', [1 n_ti], ti);                      
+    % Compute Laplacian of Gaussian in time.
+    n_ti = ceil(3 * ti) * 2 + 1;
+    log_time(1, 1, 1:n_ti) = fspecial('log', [1 n_ti], ti);                      
     % Keep it in logs array.
     logs(:,:,:,i) = (si^3) * abs(imfilter(imfilter(L,log, 'symmetric'), log_time, 'symmetric'));    
 end
@@ -50,7 +51,8 @@ local_max = point_matrix == dilation & (dilation == 1);
 % Convert binary matrix in the desired output
 points = [];
 for i = 1:N
-    si = s^(i-1)*sigma;                                                                        
+    si = s^(i-1)*sigma;
+    % Convert points of local max in desired format
     [y, x, z] = ind2sub(size(local_max(:,:,:,i)),find(local_max(:,:,:,i)));
     points = [points; x y si*ones(size(x)) z]; 
 end

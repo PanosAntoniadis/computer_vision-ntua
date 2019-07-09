@@ -26,7 +26,7 @@ function [points, points_binary] = GaborDetector (L, sigma, t, theta)
 n_sigma = ceil(3 * sigma) * 2 + 1;
 Gs = fspecial('gaussian', [n_sigma, n_sigma], sigma);
 
-% Convolve in space with above Gaussian..
+% Convolve in space with above Gaussian
 I_s = imfilter(L, Gs, 'symmetric');
 
 % Define gabor filters

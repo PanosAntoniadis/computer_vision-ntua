@@ -9,8 +9,8 @@
     
     
     <p align="center">
-    <img src="https://media.giphy.com/media/WT9Ptpa7mr6GpaMt9v/giphy.gif"  />
-      <img src="https://media.giphy.com/media/gg9HD2RADF9g5uGlgN/giphy.gif"  />
+    <img src="https://media.giphy.com/media/WT9Ptpa7mr6GpaMt9v/giphy.gif" height="325" width="280" />
+      <img src="https://media.giphy.com/media/gg9HD2RADF9g5uGlgN/giphy.gif" height="325" width="280" />
     </p>
 
 

@@ -24,7 +24,7 @@
 
 ## Lab 2: Optical Flow Estimation and Feature Extraction in Videos.
 
-- __Face Tracking using Lucas-Kanade method (right) and Gaussian pyramids method (left).__
+- __Face Tracking using Lucas-Kanade method (left) and Gaussian pyramids method (right).__
     
     <p align="center">
     <img src="https://media.giphy.com/media/WT9Ptpa7mr6GpaMt9v/giphy.gif" height="325" width="280" />
